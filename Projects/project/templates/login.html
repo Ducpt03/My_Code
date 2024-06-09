@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_ %}
+  {% if messages %}
+    {% for m in messages %}
+      <p>{{m}}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<main class="login">
+  <div class="login__content">
+    <div class="login__img">
+      <img src="{{url_for('static',filename= 'img/img-login.svg')}}" alt="">
+    </div>
+    <div class="login__forms">
+      <form action="" class="login__registre" id="login-in" method="post">
+        <h1 class="login__title">Sign In</h1>
+
+        <div class="login__box">
+          <i class='bx bx-user login__icon'></i>
+          <input type="text" placeholder="Email" class="login__input" name="email">
+        </div>
+
+        <div class="login__box">
+          <i class='bx bx-lock-alt login__icon'></i>
+          <input type="password" placeholder="Password" class="login__input" name = "password">
+        </div>
+
+        <a href="#" class="login__forgot">Forgot password?</a>
+        <button class="login__button" type="submit">Sign In</button>
+
+        <div>
+          <span class="login__account">Don't have an Account ?</span>
+          <a class="login__signin" id="sign-up" href="/sign-up">Sign Up</a>
+        </div>
+      </form>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
