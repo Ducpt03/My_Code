@@ -1,0 +1,6 @@
+Requirement:
+flask
+flask-login
+flask-SQLALchemy
+pypbc
+werkzeug
